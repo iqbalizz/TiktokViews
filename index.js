@@ -51,7 +51,7 @@ function delay(ms) {
     resultService.forEach((service, index) => {
         const serviceName = service.service_name;
         const statusService = service.status;
-        console.log(`[${index + 1}] ${chalk.green(serviceName)} ${chalk.red(statusService)}`)
+        console.log(`[${index + 1}] ${chalk.green(serviceName)} ${chalk.white(statusService)}`)
     });
     console.log();
     const chooseService = readlineSync.question(`[?] Masukkan pilihan service (1, 2, 3) : `);
