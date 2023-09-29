@@ -84,6 +84,7 @@ function delay(ms) {
                 console.log(`[!] Input : ${chalk.green(typeOrder)}`);
                 console.log(`[!] Url Target : ${chalk.green(linkTarget)}`);
                 console.log(`[!] Message : ${chalk.green(messageStatusOrder)}`);
+                console.log();
                 if (statusOrder === 'Success') {
                     break; // Keluar dari loop jika status bukan 'Pending'
                 }
