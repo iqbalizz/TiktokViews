@@ -73,13 +73,13 @@ function delay(ms) {
         const getLinkCheck = resultInput.callback;
         while (true) {
             const resultCheckStatus = await checkStatusOrder(getLinkCheck);
-            console.log(`[!] ${chalk.green(resultCheckStatus.message)}`);
             if (resultCheckStatus.status === 'success') {
                 const statusOrder = resultCheckStatus.data.status;
                 const typeOrder = resultCheckStatus.data.type;
                 const linkTarget = resultCheckStatus.data.url;
                 const messageStatusOrder = resultCheckStatus.data.message;
                 console.log()
+                console.log(`[!] ${chalk.green(resultCheckStatus.message)}`);
                 console.log(`[!] Status : ${chalk.green(statusOrder)}`);
                 console.log(`[!] Input : ${chalk.green(typeOrder)}`);
                 console.log(`[!] Url Target : ${chalk.green(linkTarget)}`);
