@@ -1,6 +1,7 @@
 import axios from "axios";
 import readlineSync from "readline-sync";
 import chalk from "chalk";
+import { Banner } from "./src/banner.js";
 
 const getService = async () => {
     try {
@@ -44,6 +45,8 @@ function delay(ms) {
 }
 
 (async () => {
+    // const banner = Banner()
+    console.log(`${chalk.white(Banner())}`)
     const resultService = await getService()
     resultService.forEach((service, index) => {
         const serviceName = service.service_name;
